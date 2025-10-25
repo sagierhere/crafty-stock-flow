@@ -31,5 +31,5 @@ export const ordersService = {
   getAll: (limit: number = 25) => api.get<Order[]>(`/Orders?limit=${limit}`),
   getById: (id: string) => api.get<Order>(`/Orders/${id}`),
   create: (data: CreateOrderRequest) => api.post<Order>('/Orders', data),
-  cancel: (id: string) => api.post(`/Orders/${id}/cancel`, {}),
+  cancel: (id: string) => api.post<void>(`/Orders/${id}/cancel`, {}),
 };
