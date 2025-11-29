@@ -1,6 +1,6 @@
 import { AUTH_TOKEN_KEY } from '@/constants/auth';
 
-const API_BASE_URL = 'https://localhost:7240/api';
+const API_BASE_URL = 'http://167.99.101.167/api';
 
 export const api = {
   async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
