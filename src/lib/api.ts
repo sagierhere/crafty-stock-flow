@@ -1,9 +1,6 @@
 import { AUTH_TOKEN_KEY } from '@/constants/auth';
 
-// Read API base URL from environment (Vite uses `import.meta.env` for runtime builds).
-// Set `VITE_API_BASE_URL` when building the frontend, e.g.:
-// VITE_API_BASE_URL="https://api.example.com/api" npm run build
-const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL ?? 'https://localhost:7240/api';
+const API_BASE_URL = 'https://167.99.101.167.nip.io/api';
 
 export const api = {
   async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
